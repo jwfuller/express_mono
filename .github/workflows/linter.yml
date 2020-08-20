@@ -35,9 +35,9 @@ jobs:
           key: ${{ runner.OS }}-build-${{ hashFiles('**/composer.lock') }}
       - name: Install Composer dependencies
         uses: php-actions/composer@v2
-      - run:
-          "phpcs --config-set installed_paths /root/.composer/vendor/drupal/coder/coder_sniffer/ \
-          && phpcs --config-set default_standard Drupal,DrupalPractice"
+      # - run:
+      #     "phpcs --config-set installed_paths /root/.composer/vendor/drupal/coder/coder_sniffer/ \
+      #     && phpcs --config-set default_standard Drupal,DrupalPractice"
 
       - name: Check coding standards
         uses: github/super-linter@v3
