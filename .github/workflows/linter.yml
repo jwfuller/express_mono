@@ -17,11 +17,28 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v2
       # Setup composer and the Drupal coding standards
+      - name: Get Composer Cache Directory
+        id: composer-cache
+        run: |
+          echo "::set-output name=dir::$(composer config cache-files-dir)"
+      - name: Cache Composer Downloads
+        uses: actions/cache@v1
+        with:
+          path: ${{ steps.composer-cache.outputs.dir }}
+          key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-composer-
+      - name: Cache PHP dependencies
+        uses: actions/cache@v1
+        with:
+          path: vendor
+          key: ${{ runner.OS }}-build-${{ hashFiles('**/composer.lock') }}
+      - name: Install Composer dependencies
+        uses: php-actions/composer@v2
       - run:
-          "curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer \
-          && composer global require drupal/coder squizlabs/php_codesniffer \
-          && phpcs --config-set installed_paths /root/.composer/vendor/drupal/coder/coder_sniffer/ \
+          "phpcs --config-set installed_paths /root/.composer/vendor/drupal/coder/coder_sniffer/ \
           && phpcs --config-set default_standard Drupal,DrupalPractice"
+
       - name: Check coding standards
         uses: github/super-linter@v3
         env:
