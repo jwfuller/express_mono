@@ -6,11 +6,11 @@
   <file>./modules/custom</file>
   <file>./modules/features</file>
   <file>./modules/hosting</file>
-  <file>./themes/cu*</file>
   <exclude-pattern>*/tests/*</exclude-pattern>
   <exclude-pattern>composer.*</exclude-pattern>
-  <exclude-pattern>*.patch</exclude-pattern>
+  <exclude-pattern>patches/*</exclude-pattern>
   <exclude-pattern>php.xml.dist</exclude-pattern>
+  <exclude-pattern>./themes/omega</exclude-pattern>
   <rule ref="../vendor/drupal/coder/coder_sniffer/Drupal"/>
   <rule ref="../vendor/drupal/coder/coder_sniffer/DrupalPractice"/>
 </ruleset>
