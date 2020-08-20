@@ -376,10 +376,6 @@ function atlas_api_request($resource, $query = NULL, $method = 'GET', $data = NU
       array(
 
 
-
-
-
-
         
         '%method' => $request_options['method'],
         '%resource' => $resource
