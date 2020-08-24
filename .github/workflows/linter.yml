@@ -35,9 +35,6 @@ jobs:
           key: ${{ runner.OS }}-build-${{ hashFiles('**/composer.lock') }}
       - name: Install Composer dependencies
         uses: php-actions/composer@v2
-
-      - run: ls -al & pwd
-
       - name: Check coding standards
         uses: github/super-linter@v3
         env:
@@ -47,3 +44,8 @@ jobs:
           VALIDATE_PHP_PHPCS: true
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Upload Report as an artifact
+        uses: actions/upload-artifact@master
+        with:
+          name: linter-report
+          path: super-linter.report
