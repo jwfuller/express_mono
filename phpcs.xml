@@ -11,6 +11,6 @@
   <exclude-pattern>libraries</exclude-pattern>
   <exclude-pattern>themes/omega</exclude-pattern>
   <exclude-pattern>*/tests/*</exclude-pattern>
-  <rule ref="../vendor/drupal/coder/coder_sniffer/Drupal"/>
-  <rule ref="../vendor/drupal/coder/coder_sniffer/DrupalPractice"/>
+  <rule ref="../../drupal/coder/coder_sniffer/Drupal"/>
+  <rule ref="../../drupal/coder/coder_sniffer/DrupalPractice"/>
 </ruleset>
