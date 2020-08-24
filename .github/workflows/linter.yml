@@ -45,12 +45,9 @@ jobs:
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           DISABLE_ERRORS: true
+          OUTPUT_DETAILS: detailed
       - name: Upload Report as an artifact
         uses: actions/upload-artifact@master
         with:
           name: linter-report
-          path: /github/workspace/super-linter.report
-      - uses: actions/upload-artifact@master
-        with:
-          name: drupalcs-report
-          path: drupalcs.report
+          path: "${{ github.workspace }}/super-linter.report/"
