@@ -4,7 +4,6 @@
   <config name="drupal_core_version" value="7" />
   <arg name="extensions" value="php,module,inc,install,test,profile,theme,css,info,txt,md,yml" />
   <arg name="basepath" value="."/>
-  <arg name="report" value="checkstyle" />
   <arg name="report-width" value="120"/>
   <arg name="report-file" value="drupalcs.report" />
   <exclude-pattern>composer.*</exclude-pattern>
