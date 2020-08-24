@@ -42,6 +42,7 @@ jobs:
       - name: Check coding standards
         uses: github/super-linter@v3
         env:
+          VALIDATE_ALL_CODEBASE: false
           # Will only run linters listed
           # https://github.com/github/super-linter#environment-variables
           VALIDATE_PHP_PHPCS: true
