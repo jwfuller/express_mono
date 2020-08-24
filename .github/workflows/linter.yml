@@ -44,6 +44,7 @@ jobs:
           VALIDATE_PHP_PHPCS: true
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          DISABLE_ERRORS: true
       - name: Upload Report as an artifact
         uses: actions/upload-artifact@master
         with:
