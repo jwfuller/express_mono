@@ -44,7 +44,6 @@ jobs:
           VALIDATE_PHP_PHPCS: true
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          DISABLE_ERRORS: true
       - run: ls -al super-linter.report
       - run: cat super-linter.report
       - name: Upload Report as an artifact
