@@ -4,10 +4,10 @@
   <config name="drupal_core_version" value="7" />
   <arg name="extensions" value="php,module,inc,install,test,profile,theme,css,info,txt,md,yml" />
   <arg name="basepath" value="."/>
-  <arg name="ignore_warnings_on_exit" value="1"/>
+  <arg name="ignore-warnings-on-exit" value="1"/>
   <arg name="report" value="checkstyle" />
   <arg name="report-width" value="120"/>
-  <arg name="report_file" value="super-lint.report" />
+  <arg name="report-file" value="drupalcs.report" />
   <exclude-pattern>composer.*</exclude-pattern>
   <exclude-pattern>php.xml.dist</exclude-pattern>
   <exclude-pattern>patches/*</exclude-pattern>
