@@ -36,13 +36,13 @@ jobs:
       - name: Install Composer dependencies
         uses: php-actions/composer@v2
       - name: Check coding standards
-        uses: github/super-linter@v3
+        uses: jwfuller/super-linter
         env:
           VALIDATE_ALL_CODEBASE: false
           # Will only run linters listed
           # https://github.com/github/super-linter#environment-variables
-          VALIDATE_PHP_PHPCS: true
-          DEFAULT_BRANCH: main
+          VALIDATE_PHP_PHPCS_DRUPAL: true
+          DEFAULT_BRANCH: dev
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           DISABLE_ERRORS: true
           OUTPUT_DETAILS: detailed
