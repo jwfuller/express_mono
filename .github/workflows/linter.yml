@@ -6,7 +6,7 @@ name: Lint Code Base
 # Start the job on all pushes and PRs
 on:
   push:
-    branches-ignore: [main]
+    branches-ignore: [main, dev]
   pull_request:
 
 jobs:
@@ -36,7 +36,7 @@ jobs:
       - name: Install Composer dependencies
         uses: php-actions/composer@v2
       - name: Check coding standards
-        uses: jwfuller/super-linter@v0.3
+        uses: jwfuller/super-linter@v0.4
         env:
           VALIDATE_ALL_CODEBASE: false
           # Will only run linters listed
