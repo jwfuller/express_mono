@@ -36,7 +36,7 @@ jobs:
       - name: Install Composer dependencies
         uses: php-actions/composer@v2
       - name: Check coding standards
-        uses: jwfuller/super-linter@v0.4
+        uses: jwfuller/super-linter@v0.5
         env:
           VALIDATE_ALL_CODEBASE: false
           # Will only run linters listed
