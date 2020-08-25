@@ -35,7 +35,6 @@ jobs:
           key: ${{ runner.OS }}-build-${{ hashFiles('**/composer.lock') }}
       - name: Install Composer dependencies
         uses: php-actions/composer@v2
-      - run: mkdir ${{ github.workspace }}/super-linter.report/
       - name: Check coding standards
         uses: github/super-linter@v3
         env:
