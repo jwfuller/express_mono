@@ -330,9 +330,8 @@ function atlas_api_request($resource, $query = NULL, $method = 'GET', $data = NU
   if (in_array($method, array('POST', 'PUT', 'PATCH', 'DELETE'))) {
     // Set Content-Type header to application/json.
     $user_string = base64_encode(variable_get('atlas_username') . ':' . variable_get('atlas_password'));
-    $request_options['headers'] = array(
-      'Content-Type' => 'application/json',
-      'User-Agent' => 'Web Express',
+    $request_options['headers'] = array('Content-Type' => 'application/json',
+      'User-Agent' => 'Web Express',   
       'Authorization' => 'Basic ' . $user_string,
     );
 
