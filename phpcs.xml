@@ -6,11 +6,11 @@
   <arg name="basepath" value="."/>
   <arg name="report-width" value="120"/>
   <exclude-pattern>composer.*</exclude-pattern>
-  <exclude-pattern>php.xml.dist</exclude-pattern>
+  <exclude-pattern>php.xml</exclude-pattern>
   <exclude-pattern>patches/*</exclude-pattern>
-  <exclude-pattern>modules/contrib</exclude-pattern>
-  <exclude-pattern>libraries</exclude-pattern>
-  <exclude-pattern>themes/omega</exclude-pattern>
+  <exclude-pattern>modules/contrib/*</exclude-pattern>
+  <exclude-pattern>libraries/*</exclude-pattern>
+  <exclude-pattern>themes/omega/*</exclude-pattern>
   <exclude-pattern>*/tests/*</exclude-pattern>
   <rule ref="./vendor/drupal/coder/coder_sniffer/Drupal"/>
   <rule ref="./vendor/drupal/coder/coder_sniffer/DrupalPractice"/>
